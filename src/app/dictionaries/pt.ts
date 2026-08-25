@@ -4,6 +4,8 @@ export const PT = {
     about: 'Sobre',
     services: 'Serviços',
     contacts: 'Contatos',
+    vision: 'Visão',
+    locations: 'Locais',
     portuguese: 'Português',
     english: 'English'
   },

@@ -1,15 +1,23 @@
 <header class="header" [class.scrolled]="isScrolled">
   <div class="header-pill">
-    <div class="logo">
+    <a class="logo" routerLink="/" (click)="scrollTo('home', $event)">
       <app-icon name="rota-logo" class="logo-icon"></app-icon>
-    </div>
+    </a>
 
     <nav class="nav">
       <ul>
-        <li><a href="#home">{{ langService.t().header.home }} <i class="arrow down"></i></a></li>
-        <li><a href="#about">{{ langService.t().header.about }} <i class="arrow down"></i></a></li>
-        <li><a href="#services">{{ langService.t().header.services }} <i class="arrow down"></i></a></li>
-        <li><a href="#contacts">{{ langService.t().header.contacts }}</a></li>
+        <li class="has-dropdown">
+          <a href="#home" (click)="scrollTo('home', $event)">{{ langService.t().header.home }} <i class="arrow down"></i></a>
+          <ul class="nav-dropdown">
+            <li><a href="#about" (click)="scrollTo('about', $event)">{{ langService.t().header.about }}</a></li>
+            <li><a href="#vision" (click)="scrollTo('vision', $event)">{{ langService.t().header.vision }}</a></li>
+            <li><a href="#services" (click)="scrollTo('services', $event)">{{ langService.t().header.services }}</a></li>
+            <li><a href="#map" (click)="scrollTo('map', $event)">{{ langService.t().header.locations }}</a></li>
+          </ul>
+        </li>
+        <li><a href="#about" (click)="scrollTo('about', $event)">{{ langService.t().header.about }}</a></li>
+        <li><a href="#services" (click)="scrollTo('services', $event)">{{ langService.t().header.services }}</a></li>
+        <li><a href="#contacts" (click)="scrollTo('contacts', $event)">{{ langService.t().header.contacts }}</a></li>
       </ul>
     </nav>
 

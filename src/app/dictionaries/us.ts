@@ -4,6 +4,8 @@ export const US = {
     about: 'About',
     services: 'Services',
     contacts: 'Contacts',
+    vision: 'Vision',
+    locations: 'Locations',
     portuguese: 'Portuguese',
     english: 'English'
   },
