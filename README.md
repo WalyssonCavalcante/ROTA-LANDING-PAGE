@@ -1,59 +1,71 @@
-# Rota
+# Rota Aeroportos e Construções - Landing Page 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+> Uma landing page para uma empresa de infraestrutura e construção de aeroportos.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Responsive](https://img.shields.io/badge/Responsive-Mobile_First-brightgreen?style=for-the-badge)
 
-To start a local development server, run:
+<div align="center">
+  <img src="screenshot.png" alt="Rota Landing Page Screenshot" width="100%">
+</div>
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📖 Sobre o Projeto
 
-## Code scaffolding
+Esta é uma landing page corporativa para a **Rota Aeroportos**, uma empresa que constrói infraestrutura pesada, projetos residenciais e aeroportos. 
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Construí este projeto como parte do meu portfólio e para um ex-empregador. Ele mostra como eu abordo requisitos de interface e performance. O objetivo foi criar um site rápido, multilíngue e com animações sutis de rolagem.
 
-```bash
-ng generate component component-name
-```
+## ✨ Principais Funcionalidades e Detalhes Técnicos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Internacionalização (i18n):** Um serviço de idiomas personalizado alterna entre Português (PT) e Inglês (US) sem recarregar a página.
+- **Otimização de Assets:** Em vez de carregar SVGs pesados como arquivos externos, os gráficos e logos são compilados diretamente no JavaScript usando um componente Angular standalone (`<app-icon>`).
+- **Interface e Animações:** O header fixo se adapta ao rolar a página, e o design utiliza glassmorphism e transições CSS para os elementos interativos.
+- **Arquitetura Angular:** O aplicativo usa componentes standalone do Angular 17+, a nova sintaxe de controle de fluxo (`@if`, `@for`, `@switch`) e Signals para gerenciamento de estado.
+- **Estilização:** O layout foi escrito em SCSS puro, sem frameworks CSS como Bootstrap ou Tailwind, mantendo o estilo isolado e sob controle.
 
-```bash
-ng generate --help
-```
+## 🛠️ Tecnologias e Ferramentas
 
-## Building
+- **Framework:** Angular 17+
+- **Estilização:** SCSS (metodologia BEM, Flexbox/Grid)
+- **Tipografia:** Inter e Exo (Google Fonts)
+- **Ícones e Assets:** SVGs inline encapsulados em componentes standalone
 
-To build the project run:
+## 🚀 Como Executar
 
-```bash
-ng build
-```
+Para rodar este projeto localmente:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Pré-requisitos
+- Node.js (v18 ou superior)
+- Angular CLI (`npm install -g @angular/cli`)
 
-## Running unit tests
+### Instalação
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/WalyssonCavalcante/ROTA-LANDING-PAGE.git
+   ```
+2. Acesse a pasta do projeto:
+   ```bash
+   cd ROTA-LANDING-PAGE
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   ng serve
+   ```
+5. Abra o navegador e acesse `http://localhost:4200/`.
 
-```bash
-ng test
-```
+## 👨‍💻 Autor
 
-## Running end-to-end tests
+**Walysson Cavalcante**
+- GitHub: [@WalyssonCavalcante](https://github.com/WalyssonCavalcante)
+- LinkedIn: [www.linkedin.com/in/walysson-cavalcante]
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
