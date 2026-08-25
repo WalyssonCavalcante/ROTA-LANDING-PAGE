@@ -12,5 +12,5 @@ import { LanguageService } from '../../../../core/services/language.service';
 export class MapComponent {
   public langService = inject(LanguageService);
 
-  // Dots are now natively embedded inside the public/map.svg image.
+  
 }

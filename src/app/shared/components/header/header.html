@@ -7,15 +7,16 @@
     <nav class="nav">
       <ul>
         <li class="has-dropdown">
-          <a href="#home" (click)="scrollTo('home', $event)">{{ langService.t().header.home }} <i class="arrow down"></i></a>
+          <a href="#home" (click)="scrollTo('home', $event)">{{ langService.t().header.home }} <i
+              class="arrow down"></i></a>
           <ul class="nav-dropdown">
-            <li><a href="#about" (click)="scrollTo('about', $event)">{{ langService.t().header.about }}</a></li>
             <li><a href="#vision" (click)="scrollTo('vision', $event)">{{ langService.t().header.vision }}</a></li>
-            <li><a href="#services" (click)="scrollTo('services', $event)">{{ langService.t().header.services }}</a></li>
+            <li><a href="#services" (click)="scrollTo('services', $event)">{{ langService.t().header.services }}</a>
+            </li>
             <li><a href="#map" (click)="scrollTo('map', $event)">{{ langService.t().header.locations }}</a></li>
           </ul>
         </li>
-        <li><a href="#about" (click)="scrollTo('about', $event)">{{ langService.t().header.about }}</a></li>
+        <li><a href="#" (click)="goToAbout($event)">{{ langService.t().header.about }}</a></li>
         <li><a href="#services" (click)="scrollTo('services', $event)">{{ langService.t().header.services }}</a></li>
         <li><a href="#contacts" (click)="scrollTo('contacts', $event)">{{ langService.t().header.contacts }}</a></li>
       </ul>
@@ -26,16 +27,16 @@
         <app-icon [name]="langService.currentLang()" class="flag"></app-icon>
         <i class="arrow down"></i>
       </div>
-      
+
       @if (langService.isLangMenuOpen()) {
-        <ul class="dropdown-menu">
-          <li (click)="langService.selectLang('BR')">
-            <app-icon name="BR" class="flag-icon"></app-icon> {{ langService.t().header.portuguese }}
-          </li>
-          <li (click)="langService.selectLang('US')">
-            <app-icon name="US" class="flag-icon"></app-icon> {{ langService.t().header.english }}
-          </li>
-        </ul>
+      <ul class="dropdown-menu">
+        <li (click)="langService.selectLang('BR')">
+          <app-icon name="BR" class="flag-icon"></app-icon> {{ langService.t().header.portuguese }}
+        </li>
+        <li (click)="langService.selectLang('US')">
+          <app-icon name="US" class="flag-icon"></app-icon> {{ langService.t().header.english }}
+        </li>
+      </ul>
       }
     </div>
   </div>

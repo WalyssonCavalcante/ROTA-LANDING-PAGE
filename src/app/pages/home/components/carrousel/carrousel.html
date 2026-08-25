@@ -16,12 +16,9 @@
         <button class="indicator-btn" (click)="setIndex($index)" aria-label="Trocar imagem">
           <svg width="24" height="24" class="indicator-svg">
             @if ($index === currentIndex()) {
-              <!-- The growing ring: 2 * pi * 10 = 62.83 -->
               <circle class="ring" cx="12" cy="12" r="10" stroke="var(--primary-blue, #0d6efd)" stroke-width="2" fill="none" />
-              <!-- The solid center dot -->
               <circle cx="12" cy="12" r="5" fill="var(--primary-blue, #0d6efd)" />
             } @else {
-              <!-- The inactive dot -->
               <circle cx="12" cy="12" r="5" fill="#cccccc" class="inactive-dot" />
             }
           </svg>

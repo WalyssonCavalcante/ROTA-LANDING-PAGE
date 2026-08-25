@@ -1,25 +1,24 @@
 .vision {
   padding: 100px 0;
-  background-color: #070b19; /* Extremely dark blue matching the footer */
+  background-color: #070b19;
   color: var(--text-light, #ffffff);
-  
+
   .vision-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
   }
-  
+
   .vision-header {
     margin-bottom: 50px;
-    
+
     h2 {
       font-family: 'Exo', sans-serif;
       font-size: 3rem;
       font-weight: 700;
       color: #ffffff;
       margin: 0;
-      
-      /* The dot at the end is colored blue. Needs ::ng-deep because it's injected via innerHTML */
+
       ::ng-deep span {
         color: var(--primary-blue, #0d6efd);
       }
@@ -31,38 +30,38 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    
+
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
       gap: 40px;
     }
   }
-  
+
   .vision-image {
     width: 100%;
-    
+
     img {
       width: 100%;
       height: auto;
       object-fit: cover;
       display: block;
       border-radius: 12px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
   }
-  
+
   .vision-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 25px;
-    
+
     p {
       font-size: 1rem;
       line-height: 1.8;
       color: #e2e8f0;
       margin: 0;
-      text-align: justify; /* Matches the clean right edge from the screenshot */
+      text-align: justify;
     }
   }
 }

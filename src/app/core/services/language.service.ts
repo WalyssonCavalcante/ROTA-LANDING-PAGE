@@ -14,7 +14,7 @@ export class LanguageService {
     US: US
   };
 
-  t = computed(() => this.dictionaries[this.currentLang()]);
+  t = computed<any>(() => this.dictionaries[this.currentLang()]);
 
   toggleLangMenu() {
     this.isLangMenuOpen.update(open => !open);
