@@ -1,0 +1,35 @@
+<section class="about" id="sobre">
+  <div class="container about-container">
+    <div class="about-grid">
+
+      <div class="about-text-section">
+        <div class="structural-header">
+          <div class="eyebrow">
+            <span>{{ langService.t().about.subtitle }}</span>
+          </div>
+          <h2 class="about-title" [innerHTML]="langService.t().about.title"></h2>
+        </div>
+
+        <p class="about-lead">
+          {{ langService.t().about.lead }}
+        </p>
+
+        <div class="about-principles">
+          @for (feature of langService.t().about.features; track feature) {
+          <div class="principle-row">
+            <span class="principle-marker"></span>
+            <p>{{ feature }}</p>
+          </div>
+          }
+        </div>
+      </div>
+
+      <div class="about-media-section">
+        <figure class="image-wrapper">
+          <img src="/about-section.svg" alt="Maquinário de construção" />
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,140 @@
+.about {
+  padding: 0 0 80px 0;
+  background-color: transparent; // Allow hero background to show if it extends
+  position: relative;
+  
+  .about-container {
+    background-color: #ffffff;
+    margin-top: -80px; // Pull up to overlap the hero section
+    position: relative;
+    z-index: 10;
+    padding: 60px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 0; // Zero border radius for architectural feel
+  }
+
+  .about-grid {
+    display: flex;
+    gap: 60px;
+    align-items: stretch; // Stretch so the media section can vertically center the image
+    
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  
+  .about-text-section {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .structural-header {
+      margin-bottom: 30px;
+      
+      .eyebrow {
+        border-bottom: 1px solid var(--primary-blue);
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        display: inline-block;
+        
+        span {
+          color: var(--primary-blue);
+          font-size: 0.85rem;
+          font-weight: 600;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+      
+      .about-title {
+        font-size: 2.2rem;
+        color: var(--secondary-blue);
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        font-weight: 700;
+        
+        span {
+          color: var(--primary-blue);
+        }
+      }
+    }
+    
+    .about-lead {
+      color: #555;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    
+    .about-principles {
+      display: flex;
+      flex-direction: column;
+      
+      .principle-row {
+        display: flex;
+        align-items: flex-start;
+        padding: 16px 0;
+        border-top: 1px solid #eaeaea;
+        gap: 16px;
+        
+        &:last-child {
+          border-bottom: 1px solid #eaeaea;
+        }
+        
+        .principle-marker {
+          min-width: 8px;
+          height: 8px;
+          background-color: var(--primary-blue);
+          margin-top: 8px;
+          border-radius: 0;
+        }
+        
+        p {
+          color: #333;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  .about-media-section {
+    flex: 1;
+    display: flex;
+    align-items: center; // Vertically centers the image relative to the text
+    justify-content: center;
+    
+    .image-wrapper {
+      margin: 0;
+      width: 100%;
+      position: relative;
+      
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-radius: 25px; // Matches the SVG's built-in rounded corners
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    .about-container {
+      padding: 30px;
+      margin-top: -40px;
+    }
+    
+    .about-text-section {
+      .structural-header .about-title {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}

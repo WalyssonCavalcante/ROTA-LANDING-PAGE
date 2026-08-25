@@ -1,0 +1,16 @@
+<section class="hero" id="home">
+  <div class="overlay"></div>
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1 [innerHTML]="langService.t().hero.title"></h1>
+      <p [innerHTML]="langService.t().hero.subtitle"></p>
+
+      <div class="hero-buttons">
+        <button class="btn-primary">
+          {{ langService.t().hero.btnQuote }}
+        </button>
+        <button class="btn-outline">{{ langService.t().hero.btnServices }}</button>
+      </div>
+    </div>
+  </div>
+</section>

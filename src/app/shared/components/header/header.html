@@ -1,0 +1,34 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="header-pill">
+    <div class="logo">
+      <app-icon name="rota-logo" class="logo-icon"></app-icon>
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">{{ langService.t().header.home }} <i class="arrow down"></i></a></li>
+        <li><a href="#about">{{ langService.t().header.about }} <i class="arrow down"></i></a></li>
+        <li><a href="#services">{{ langService.t().header.services }} <i class="arrow down"></i></a></li>
+        <li><a href="#contacts">{{ langService.t().header.contacts }}</a></li>
+      </ul>
+    </nav>
+
+    <div class="lang-selector-container">
+      <div class="lang-selector" (click)="langService.toggleLangMenu()">
+        <app-icon [name]="langService.currentLang()" class="flag"></app-icon>
+        <i class="arrow down"></i>
+      </div>
+      
+      @if (langService.isLangMenuOpen()) {
+        <ul class="dropdown-menu">
+          <li (click)="langService.selectLang('BR')">
+            <app-icon name="BR" class="flag-icon"></app-icon> {{ langService.t().header.portuguese }}
+          </li>
+          <li (click)="langService.selectLang('US')">
+            <app-icon name="US" class="flag-icon"></app-icon> {{ langService.t().header.english }}
+          </li>
+        </ul>
+      }
+    </div>
+  </div>
+</header>
