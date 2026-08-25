@@ -5,10 +5,6 @@
   color: var(--text-light);
   min-height: 100vh;
 
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
   padding-top: 150px;
   padding-bottom: 80px;
 }
@@ -24,7 +20,7 @@
     letter-spacing: -1px;
     margin-bottom: 40px;
 
-    span {
+    ::ng-deep span {
       color: var(--primary-blue);
     }
 
