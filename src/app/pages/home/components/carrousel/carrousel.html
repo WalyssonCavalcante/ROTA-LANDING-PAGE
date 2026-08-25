@@ -1,0 +1,32 @@
+<section class="carrousel-section">
+  <div class="carrousel-container">
+    <div class="images-wrapper">
+      @for (img of images; track $index) {
+        <img 
+          [src]="img" 
+          alt="Rota Aeroportos Obras" 
+          class="carrousel-image" 
+          [class.active]="$index === currentIndex()" 
+        />
+      }
+    </div>
+    
+    <div class="indicators">
+      @for (img of images; track $index) {
+        <button class="indicator-btn" (click)="setIndex($index)" aria-label="Trocar imagem">
+          <svg width="24" height="24" class="indicator-svg">
+            @if ($index === currentIndex()) {
+              <!-- The growing ring: 2 * pi * 10 = 62.83 -->
+              <circle class="ring" cx="12" cy="12" r="10" stroke="var(--primary-blue, #0d6efd)" stroke-width="2" fill="none" />
+              <!-- The solid center dot -->
+              <circle cx="12" cy="12" r="5" fill="var(--primary-blue, #0d6efd)" />
+            } @else {
+              <!-- The inactive dot -->
+              <circle cx="12" cy="12" r="5" fill="#cccccc" class="inactive-dot" />
+            }
+          </svg>
+        </button>
+      }
+    </div>
+  </div>
+</section>

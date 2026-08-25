@@ -1,0 +1,19 @@
+<section class="map-section">
+  <div class="container map-container">
+    
+    <div class="map-text">
+      <h2 [innerHTML]="langService.t().map.title"></h2>
+      <p class="subtitle">{{ langService.t().map.subtitle }}</p>
+      
+      <div class="locations">
+        <h3>{{ langService.t().map.locationsTitle }}</h3>
+        <p>{{ langService.t().map.locationsList }}</p>
+      </div>
+    </div>
+
+    <div class="map-image-wrapper">
+      <img src="/map.svg" alt="Mapa do Brasil" class="brazil-map" />
+    </div>
+
+  </div>
+</section>

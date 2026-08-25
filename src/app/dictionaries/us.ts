@@ -29,5 +29,11 @@ export const US = {
     title: 'Our Vision<span>.</span>',
     p1: 'To be the largest consulting engineering company in the country, operating in the entire service supply chain, meeting the demands of the national and international market, effectively and efficiently, committed to quality and innovation.',
     p2: 'We value sustainability, professional ethics, and the continuous development of our team, promoting strategic partnerships and contributing to the progress of the communities where we are present. Our goal is to establish standards of excellence, delivering innovative and high-impact solutions that generate value and trust for our clients and partners.'
+  },
+  map: {
+    title: 'See <span class="highlight">ROTA</span> across Brazil<span class="dot">.</span>',
+    subtitle: 'We currently work in 17 states across the country.',
+    locationsTitle: 'Locations:',
+    locationsList: 'Acre, Amazonas, Roraima, Pará, Maranhão, Piauí, Mato Grosso, Mato Grosso do Sul, Goiás, Distrito Federal, Minas Gerais, São Paulo, Santa Catarina, Espírito Santo, Curitiba, Paraná.'
   }
 };

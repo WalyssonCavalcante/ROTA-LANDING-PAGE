@@ -29,5 +29,11 @@ export const PT = {
     title: 'Nossa Visão<span>.</span>',
     p1: 'Ser a maior empresa de engenharia consultiva do país, atuando em toda a cadeia de fornecimento de serviços, suprindo as demandas do mercado nacional e internacional, de forma eficaz e eficiente, comprometida com a qualidade e a inovação.',
     p2: 'Valorizamos a sustentabilidade, a ética profissional e o desenvolvimento contínuo de nossa equipe, promovendo parcerias estratégicas e contribuindo para o progresso das comunidades onde estamos presentes. Nosso objetivo é estabelecer padrões de excelência, entregando soluções inovadoras e de alto impacto, que gerem valor e confiança para nossos clientes e parceiros.'
+  },
+  map: {
+    title: 'Veja a <span class="highlight">ROTA</span> pelo Brasil<span class="dot">.</span>',
+    subtitle: 'Atualmente trabalhamos em 17 estados pelo país.',
+    locationsTitle: 'Locais:',
+    locationsList: 'Acre, Amazonas, Roraima, Pará, Maranhão, Piauí, Mato Grosso, Mato Grosso do Sul, Goiás, Distrito Federal, Minas Gerais, São Paulo, Santa Catarina, Espírito Santo, Curitiba, Paraná.'
   }
 };
