@@ -51,6 +51,16 @@ export class HeaderComponent {
     this.router.navigate(['/sobre']).then(() => window.scrollTo(0, 0));
   }
 
+  goToServices(event: Event) {
+    event.preventDefault();
+    this.router.navigate(['/servicos']).then(() => window.scrollTo(0, 0));
+  }
+
+  goToContacts(event: Event) {
+    event.preventDefault();
+    this.router.navigate(['/contato']).then(() => window.scrollTo(0, 0));
+  }
+
   private doScroll(element: HTMLElement) {
     const headerOffset = 80;
     const elementPosition = element.getBoundingClientRect().top;

@@ -6,12 +6,27 @@
   min-height: 100vh;
 
   padding-top: 150px;
-  padding-bottom: 80px;
+  padding-bottom: 0;
 }
 
 .about-section {
   position: relative;
   z-index: 2;
+
+  .eyebrow {
+    border-bottom: 1px solid #749CCF;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    display: inline-block;
+    
+    span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #749CCF;
+    }
+  }
 
   .about-title {
     font-size: 3.5rem;
@@ -119,31 +134,22 @@
 }
 
 .nm-section {
+  background-color: #ffffff;
+  padding: 100px 0;
+
   .nm-container {
     position: relative;
   }
 
-  .nm-card {
-    background-color: var(--text-light);
-    border-radius: 20px;
-    padding: 80px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-    margin-bottom: -40px; 
+  .nm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 
     @media (max-width: 992px) {
-      padding: 40px;
-    }
-
-    .nm-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-
-      @media (max-width: 992px) {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
+      grid-template-columns: 1fr;
+      gap: 50px;
     }
   }
 }

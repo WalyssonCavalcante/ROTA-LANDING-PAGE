@@ -1,0 +1,77 @@
+<section class="contact-page-wrapper">
+  <!-- Top Dark Background Section -->
+  <div class="contact-hero">
+    <div class="container hero-container">
+      <div class="eyebrow reveal-on-scroll">
+        <span>{{ langService.t().contactPage.eyebrow }}</span>
+      </div>
+      <h1 class="page-title reveal-on-scroll" [innerHTML]="langService.t().contactPage.title"></h1>
+    </div>
+  </div>
+
+  <!-- Bottom Light Background Section & Overlapping Card -->
+  <div class="contact-content-section">
+    <div class="container overlapping-container reveal-on-scroll" style="transition-delay: 200ms;">
+      <div class="contact-card">
+        
+        <!-- Left Panel: Info -->
+        <div class="info-panel">
+          <h3>{{ langService.t().contactPage.online }}</h3>
+          
+          <div class="contact-methods">
+            <div class="method-item">
+              <app-icon name="email"></app-icon>
+              <div class="method-text">
+                <a href="mailto:email@email.com">email@email.com</a>
+                <a href="mailto:email@email.com">email@email.com</a>
+              </div>
+            </div>
+            
+            <div class="method-item">
+              <app-icon name="phone"></app-icon>
+              <div class="method-text">
+                <a href="tel:+559999999999">{{ langService.t().contactPage.form.phonePlaceholder }}</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><app-icon name="instagram"></app-icon></a>
+            <a href="#" aria-label="Facebook"><app-icon name="facebook"></app-icon></a>
+            <a href="#" aria-label="LinkedIn"><app-icon name="linkedin"></app-icon></a>
+            <a href="#" aria-label="WhatsApp"><app-icon name="whatsapp"></app-icon></a>
+          </div>
+        </div>
+
+        <!-- Right Panel: Form -->
+        <div class="form-panel">
+          <form class="contact-form" (submit)="$event.preventDefault()">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">{{ langService.t().contactPage.form.name }}</label>
+                <input type="text" id="name" [placeholder]="langService.t().contactPage.form.namePlaceholder">
+              </div>
+              <div class="form-group">
+                <label for="phone">{{ langService.t().contactPage.form.phone }}</label>
+                <input type="tel" id="phone" [placeholder]="langService.t().contactPage.form.phonePlaceholder">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">{{ langService.t().contactPage.form.email }}</label>
+              <input type="email" id="email" [placeholder]="langService.t().contactPage.form.emailPlaceholder">
+            </div>
+
+            <div class="form-group">
+              <label for="message">{{ langService.t().contactPage.form.message }}</label>
+              <textarea id="message" rows="4" [placeholder]="langService.t().contactPage.form.messagePlaceholder"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">{{ langService.t().contactPage.form.submit }}</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

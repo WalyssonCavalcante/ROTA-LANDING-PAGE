@@ -1,6 +1,9 @@
 <div class="about-page-wrapper">
   <section class="about-section qs-section">
     <div class="container qs-container">
+      <div class="eyebrow reveal-on-scroll">
+        <span>{{ langService.t().aboutPage.quemSomosEyebrow }}</span>
+      </div>
       <h2 class="about-title light reveal-on-scroll" [innerHTML]="langService.t().aboutPage.quemSomosTitle"></h2>
       
       <div class="qs-grid reveal-on-scroll">
@@ -20,18 +23,16 @@
 
   <section class="about-section nm-section">
     <div class="container nm-container">
-      <div class="nm-card reveal-on-scroll">
-        <h2 class="about-title dark" [innerHTML]="langService.t().aboutPage.nossaMissaoTitle"></h2>
-        
-        <div class="nm-grid">
-          <div class="text-content dark">
-            <p class="lead">{{ langService.t().aboutPage.nossaMissaoP1 }}</p>
-            <p>{{ langService.t().aboutPage.nossaMissaoP2 }}</p>
-          </div>
-          <div class="image-wrapper">
-            <div class="image-frame alt">
-              <img src="/about/About-Section2.svg" alt="Nossa Missão" />
-            </div>
+      <h2 class="about-title dark reveal-on-scroll" [innerHTML]="langService.t().aboutPage.nossaMissaoTitle"></h2>
+      
+      <div class="nm-grid reveal-on-scroll">
+        <div class="text-content dark">
+          <p class="lead">{{ langService.t().aboutPage.nossaMissaoP1 }}</p>
+          <p>{{ langService.t().aboutPage.nossaMissaoP2 }}</p>
+        </div>
+        <div class="image-wrapper">
+          <div class="image-frame alt">
+            <img src="/about/About-Section2.svg" alt="Nossa Missão" />
           </div>
         </div>
       </div>

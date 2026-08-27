@@ -12,6 +12,21 @@
   .vision-header {
     margin-bottom: 50px;
 
+    .eyebrow {
+      border-bottom: 1px solid #749CCF;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+      display: inline-block;
+      
+      span {
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #749CCF;
+      }
+    }
+
     h2 {
       font-family: 'Exo', sans-serif;
       font-size: 3rem;

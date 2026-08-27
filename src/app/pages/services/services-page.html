@@ -1,0 +1,113 @@
+<section class="services-wrapper" id="services">
+  <!-- Top Dark Section -->
+  <div class="services-intro">
+    <div class="container intro-container">
+      <div class="intro-content reveal-on-scroll">
+        <div class="structural-header">
+          <div class="eyebrow">
+            <span>{{ langService.t().servicesSection.subtitle }}</span>
+          </div>
+          <h2 class="section-title" [innerHTML]="langService.t().servicesSection.title"></h2>
+        </div>
+
+        <div class="intro-body">
+          <p>{{ langService.t().servicesSection.p1 }}</p>
+          <br>
+          <p>{{ langService.t().servicesSection.p2 }}</p>
+          <br>
+          <p class="list-title">{{ langService.t().servicesSection.p3 }}</p>
+          <ul class="services-list">
+            @for (item of langService.t().servicesSection.list; track $index) {
+            <li class="reveal-on-scroll" [style.transition-delay]="$index * 50 + 'ms'">{{ item }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <div class="intro-media reveal-on-scroll" style="transition-delay: 200ms;">
+        <img src="/service-section.svg" alt="O que fazemos" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom White Section -->
+  <div class="services-grid-section">
+    <div class="container grid-container">
+      <h2 class="grid-main-title reveal-on-scroll" [innerHTML]="langService.t().servicesSection.gridTitle"></h2>
+
+      <div class="grid-wrapper">
+        <!-- Item 1 -->
+        <div class="grid-item reveal-on-scroll" style="transition-delay: 100ms;">
+          <div class="icon-wrapper">
+            <app-icon name="predio" />
+          </div>
+          <h3>{{ langService.t().servicesSection.gridItems.urbanizacao.title }}</h3>
+          <p>{{ langService.t().servicesSection.gridItems.urbanizacao.desc }}</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="grid-item reveal-on-scroll" style="transition-delay: 150ms;">
+          <div class="icon-wrapper">
+            <app-icon name="gota" />
+          </div>
+          <h3>{{ langService.t().servicesSection.gridItems.hidraulicas.title }}</h3>
+          <p>{{ langService.t().servicesSection.gridItems.hidraulicas.desc }}</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="grid-item reveal-on-scroll" style="transition-delay: 200ms;">
+          <div class="icon-wrapper">
+            <app-icon name="ondas" />
+          </div>
+          <h3>{{ langService.t().servicesSection.gridItems.eletronicas.title }}</h3>
+          <p>{{ langService.t().servicesSection.gridItems.eletronicas.desc }}</p>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="grid-item reveal-on-scroll" style="transition-delay: 250ms;">
+          <div class="icon-wrapper">
+            <app-icon name="tijolos" />
+          </div>
+          <h3>{{ langService.t().servicesSection.gridItems.reformas.title }}</h3>
+          <p>{{ langService.t().servicesSection.gridItems.reformas.desc }}</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="grid-item reveal-on-scroll" style="transition-delay: 300ms;">
+          <div class="icon-wrapper">
+            <app-icon name="aviao" />
+          </div>
+          <h3>{{ langService.t().servicesSection.gridItems.aeroportos.title }}</h3>
+          <p>{{ langService.t().servicesSection.gridItems.aeroportos.desc }}</p>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="grid-item reveal-on-scroll" style="transition-delay: 350ms;">
+          <div class="icon-wrapper">
+            <app-icon name="voo" />
+          </div>
+          <h3>{{ langService.t().servicesSection.gridItems.obras_aeroportuarias.title }}</h3>
+          <p>{{ langService.t().servicesSection.gridItems.obras_aeroportuarias.desc }}</p>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="grid-item reveal-on-scroll" style="transition-delay: 400ms;">
+          <div class="icon-wrapper">
+            <app-icon name="certificado" />
+          </div>
+          <h3>{{ langService.t().servicesSection.gridItems.homologacao.title }}</h3>
+          <p>{{ langService.t().servicesSection.gridItems.homologacao.desc }}</p>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="grid-item reveal-on-scroll" style="transition-delay: 450ms;">
+          <div class="icon-wrapper">
+            <app-icon name="heliponto" />
+          </div>
+          <h3>{{ langService.t().servicesSection.gridItems.helipontos.title }}</h3>
+          <p>{{ langService.t().servicesSection.gridItems.helipontos.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

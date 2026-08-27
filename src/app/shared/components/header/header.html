@@ -10,15 +10,14 @@
           <a href="#home" (click)="scrollTo('home', $event)">{{ langService.t().header.home }} <i
               class="arrow down"></i></a>
           <ul class="nav-dropdown">
+            <li><a href="#about" (click)="scrollTo('about', $event)">{{ langService.t().header.about }}</a></li>
             <li><a href="#vision" (click)="scrollTo('vision', $event)">{{ langService.t().header.vision }}</a></li>
-            <li><a href="#services" (click)="scrollTo('services', $event)">{{ langService.t().header.services }}</a>
-            </li>
             <li><a href="#map" (click)="scrollTo('map', $event)">{{ langService.t().header.locations }}</a></li>
           </ul>
         </li>
         <li><a href="#" (click)="goToAbout($event)">{{ langService.t().header.about }}</a></li>
-        <li><a href="#services" (click)="scrollTo('services', $event)">{{ langService.t().header.services }}</a></li>
-        <li><a href="#contacts" (click)="scrollTo('contacts', $event)">{{ langService.t().header.contacts }}</a></li>
+        <li><a href="#" (click)="goToServices($event)">{{ langService.t().header.services }}</a></li>
+        <li><a href="#" (click)="goToContacts($event)">{{ langService.t().header.contacts }}</a></li>
       </ul>
     </nav>
 

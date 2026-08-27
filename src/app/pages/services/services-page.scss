@@ -1,0 +1,203 @@
+.services-wrapper {
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Dark section
+  .services-intro {
+    background-color: #070b19;
+    color: var(--text-light, #ffffff);
+    padding: 160px 0 100px 0;
+
+    .intro-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    }
+
+    .structural-header {
+      margin-bottom: 30px;
+
+      .eyebrow {
+        border-bottom: 1px solid #749CCF;
+        padding-bottom: 6px;
+        margin-bottom: 20px;
+        display: inline-block;
+        
+        span {
+          font-size: 0.85rem;
+          font-weight: 500;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #749CCF;
+        }
+      }
+
+      .section-title {
+        font-family: 'Exo', sans-serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+        line-height: 1.1;
+
+        ::ng-deep span {
+          color: var(--primary-blue, #0d6efd);
+        }
+      }
+    }
+
+      .intro-body {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          font-size: 1.05rem;
+          line-height: 1.6;
+          color: #e2e8f0;
+          margin: 0;
+          text-align: justify;
+
+          &.list-title {
+            font-weight: 600;
+            color: #ffffff;
+          }
+        }
+
+        .services-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 40px;
+          padding-left: 0;
+          margin-top: 20px;
+          list-style: none;
+          
+          li {
+            display: flex;
+            align-items: center;
+            color: #f1f5f9;
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 400;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            transition: color 0.3s ease, border-color 0.3s ease;
+
+            &:hover {
+              color: #ffffff;
+              border-color: var(--primary-blue, #0d6efd);
+            }
+          }
+
+          @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+
+      .intro-media {
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 12px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+      }
+  }
+
+  // Light section
+  .services-grid-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+
+    .grid-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .grid-main-title {
+      font-family: 'Exo', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--secondary-blue, #0b1120);
+      text-align: center;
+      margin-bottom: 70px;
+      
+      ::ng-deep span {
+        color: var(--primary-blue, #0d6efd);
+      }
+    }
+
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px 30px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        
+        .icon-wrapper {
+          color: var(--primary-blue, #0d6efd);
+        }
+      }
+
+      .icon-wrapper {
+        width: 40px;
+        height: 40px;
+        color: #0c2d5f;
+        margin-bottom: 20px;
+        transition: color 0.3s ease;
+      }
+
+      h3 {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: #0c2d5f;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        font-size: 0.85rem;
+        color: #0b1120;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+  }
+}
