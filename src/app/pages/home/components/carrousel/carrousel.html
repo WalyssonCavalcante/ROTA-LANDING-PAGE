@@ -1,6 +1,6 @@
 <section class="carrousel-section" id="services">
   <div class="carrousel-container">
-    <div class="images-wrapper">
+    <div class="images-wrapper" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
       @for (img of images; track $index) {
         <img 
           [src]="img" 

@@ -16,6 +16,10 @@
   padding: 0;
 }
 
+html {
+  background-color: #070b19; /* Matches footer to prevent white overscroll on iOS */
+}
+
 body {
   font-family: 'Inter', sans-serif;
   color: var(--text-dark);

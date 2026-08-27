@@ -22,6 +22,9 @@ export class CarrouselComponent implements OnInit, OnDestroy {
   currentIndex = signal(0);
   private intervalId: any;
   private platformId = inject(PLATFORM_ID);
+  
+  private touchStartX = 0;
+  private touchEndX = 0;
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -48,8 +51,34 @@ export class CarrouselComponent implements OnInit, OnDestroy {
     this.currentIndex.update(i => (i + 1) % this.images.length);
   }
 
+  prev() {
+    this.currentIndex.update(i => (i - 1 + this.images.length) % this.images.length);
+  }
+
   setIndex(index: number) {
     this.currentIndex.set(index);
     this.startTimer();
+  }
+
+  onTouchStart(event: TouchEvent) {
+    this.touchStartX = event.changedTouches[0].screenX;
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    this.touchEndX = event.changedTouches[0].screenX;
+    this.handleSwipe();
+  }
+
+  private handleSwipe() {
+    const swipeThreshold = 50; // minimum pixels to be considered a swipe
+    if (this.touchEndX < this.touchStartX - swipeThreshold) {
+      // Swiped left -> next image
+      this.next();
+      this.startTimer(); // reset timer
+    } else if (this.touchEndX > this.touchStartX + swipeThreshold) {
+      // Swiped right -> prev image
+      this.prev();
+      this.startTimer(); // reset timer
+    }
   }
 }
