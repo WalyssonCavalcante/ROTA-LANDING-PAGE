@@ -96,18 +96,19 @@
           display: none; // completely removed from HTML, just hide or remove SCSS
         }
       }
+    } // close intro-content
 
-      .intro-media {
-        grid-area: media;
-        img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-          border-radius: 12px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
+    .intro-media {
+      grid-area: media;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       }
-  }
+    }
+  } // close services-intro
 
   // Light section
   .services-grid-section {
