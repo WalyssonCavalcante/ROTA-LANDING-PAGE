@@ -17,15 +17,22 @@
 }
 
 html {
-  background-color: #070b19; /* Matches footer to prevent white overscroll on iOS */
+  background-color: #070b19; /* Matches footer/hero to fix iOS Safari borders */
 }
 
 body {
   font-family: 'Inter', sans-serif;
   color: var(--text-dark);
-  background-color: var(--text-light);
+  background-color: #070b19; /* Safari uses body background for overscroll and safe areas */
   line-height: 1.6;
   overflow-y: overlay;
+  overscroll-behavior: none; /* Disables rubber-banding entirely on supported browsers */
+}
+
+app-root {
+  display: block;
+  background-color: var(--text-light); /* Keeps the rest of the site white */
+  min-height: 100vh;
 }
 
 a {
