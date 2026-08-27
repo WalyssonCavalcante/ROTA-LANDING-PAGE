@@ -15,6 +15,28 @@ export class HeaderComponent {
   public langService = inject(LanguageService);
   private router = inject(Router);
   public isScrolled = false;
+  public isMobileMenuOpen = false;
+  public isMobileHomeDropdownOpen = false;
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    if (this.isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      this.isMobileHomeDropdownOpen = false; // reset when closing menu
+    }
+  }
+
+  toggleMobileHomeDropdown(event: Event) {
+    event.preventDefault();
+    this.isMobileHomeDropdownOpen = !this.isMobileHomeDropdownOpen;
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
+    document.body.style.overflow = '';
+  }
 
   @HostListener('window:scroll')
   onWindowScroll() {
@@ -23,6 +45,7 @@ export class HeaderComponent {
 
   scrollTo(sectionId: string, event: Event) {
     event.preventDefault();
+    this.closeMobileMenu();
     
     if (sectionId === 'home') {
       if (this.router.url !== '/') {
@@ -48,16 +71,19 @@ export class HeaderComponent {
 
   goToAbout(event: Event) {
     event.preventDefault();
+    this.closeMobileMenu();
     this.router.navigate(['/sobre']).then(() => window.scrollTo(0, 0));
   }
 
   goToServices(event: Event) {
     event.preventDefault();
+    this.closeMobileMenu();
     this.router.navigate(['/servicos']).then(() => window.scrollTo(0, 0));
   }
 
   goToContacts(event: Event) {
     event.preventDefault();
+    this.closeMobileMenu();
     this.router.navigate(['/contato']).then(() => window.scrollTo(0, 0));
   }
 

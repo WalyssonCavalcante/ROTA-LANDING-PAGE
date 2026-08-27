@@ -38,5 +38,45 @@
       </ul>
       }
     </div>
+
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile-overlay" [class.open]="isMobileMenuOpen" (click)="closeMobileMenu()">
+    <div class="mobile-menu-inner" (click)="$event.stopPropagation()">
+      <ul>
+        <li class="mobile-dropdown">
+          <a href="#" (click)="toggleMobileHomeDropdown($event)" class="mobile-dropdown-toggle">
+            {{ langService.t().header.home }}
+            <i class="arrow down" [class.up]="isMobileHomeDropdownOpen"></i>
+          </a>
+          <ul class="mobile-dropdown-menu" [class.open]="isMobileHomeDropdownOpen">
+            <li><a href="#home" (click)="scrollTo('home', $event)">- {{ langService.t().header.home }}</a></li>
+            <li><a href="#about" (click)="scrollTo('about', $event)">- {{ langService.t().header.about }}</a></li>
+            <li><a href="#vision" (click)="scrollTo('vision', $event)">- {{ langService.t().header.vision }}</a></li>
+            <li><a href="#map" (click)="scrollTo('map', $event)">- {{ langService.t().header.locations }}</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li><a href="#" (click)="goToAbout($event)">{{ langService.t().header.about }}</a></li>
+        <li><a href="#" (click)="goToServices($event)">{{ langService.t().header.services }}</a></li>
+        <li><a href="#" (click)="goToContacts($event)">{{ langService.t().header.contacts }}</a></li>
+      </ul>
+      
+      <div class="mobile-lang-selector">
+        <div class="lang-option" [class.active]="langService.currentLang() === 'BR'" (click)="langService.selectLang('BR')">
+          <app-icon name="BR" class="flag-icon"></app-icon> PT-BR
+        </div>
+        <div class="lang-option" [class.active]="langService.currentLang() === 'US'" (click)="langService.selectLang('US')">
+          <app-icon name="US" class="flag-icon"></app-icon> EN-US
+        </div>
+      </div>
+    </div>
   </div>
 </header>

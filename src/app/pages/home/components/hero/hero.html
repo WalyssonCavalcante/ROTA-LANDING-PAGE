@@ -6,10 +6,10 @@
       <p [innerHTML]="langService.t().hero.subtitle"></p>
 
       <div class="hero-buttons">
-        <button class="btn-primary">
+        <button class="btn-primary" (click)="goToContact()">
           {{ langService.t().hero.btnQuote }}
         </button>
-        <button class="btn-outline">{{ langService.t().hero.btnServices }}</button>
+        <button class="btn-outline" (click)="goToServices()">{{ langService.t().hero.btnServices }}</button>
       </div>
     </div>
   </div>

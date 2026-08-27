@@ -14,21 +14,33 @@
   .services-intro {
     background-color: #070b19;
     color: var(--text-light, #ffffff);
-    padding: 160px 0 100px 0;
+    padding: 180px 0 100px 0;
+
+    @media (max-width: 768px) {
+      padding: 200px 0 80px 0;
+    }
 
     .intro-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      grid-template-areas:
+        "header media"
+        "body media";
+      gap: 0 60px;
       align-items: center;
 
       @media (max-width: 992px) {
         grid-template-columns: 1fr;
-        gap: 50px;
+        grid-template-areas:
+          "header"
+          "media"
+          "body";
+        gap: 40px 0;
       }
     }
 
     .structural-header {
+      grid-area: header;
       margin-bottom: 30px;
 
       .eyebrow {
@@ -60,6 +72,9 @@
       }
     }
 
+    .intro-content {
+      grid-area: body;
+
       .intro-body {
         display: flex;
         flex-direction: column;
@@ -78,37 +93,12 @@
         }
 
         .services-list {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          column-gap: 40px;
-          padding-left: 0;
-          margin-top: 20px;
-          list-style: none;
-          
-          li {
-            display: flex;
-            align-items: center;
-            color: #f1f5f9;
-            font-size: 1rem;
-            line-height: 1.5;
-            font-weight: 400;
-            padding: 16px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            transition: color 0.3s ease, border-color 0.3s ease;
-
-            &:hover {
-              color: #ffffff;
-              border-color: var(--primary-blue, #0d6efd);
-            }
-          }
-
-          @media (max-width: 768px) {
-            grid-template-columns: 1fr;
-          }
+          display: none; // completely removed from HTML, just hide or remove SCSS
         }
       }
 
       .intro-media {
+        grid-area: media;
         img {
           width: 100%;
           height: auto;
@@ -165,22 +155,30 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      transition: transform 0.3s ease;
+      padding: 35px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        border-color: rgba(13, 110, 253, 0.2);
         
         .icon-wrapper {
           color: var(--primary-blue, #0d6efd);
+          transform: scale(1.1);
         }
       }
 
       .icon-wrapper {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         color: #0c2d5f;
-        margin-bottom: 20px;
-        transition: color 0.3s ease;
+        margin-bottom: 25px;
+        transition: all 0.4s ease;
       }
 
       h3 {

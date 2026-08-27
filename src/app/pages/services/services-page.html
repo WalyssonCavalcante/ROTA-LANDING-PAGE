@@ -2,25 +2,18 @@
   <!-- Top Dark Section -->
   <div class="services-intro">
     <div class="container intro-container">
-      <div class="intro-content reveal-on-scroll">
-        <div class="structural-header">
-          <div class="eyebrow">
-            <span>{{ langService.t().servicesSection.subtitle }}</span>
-          </div>
-          <h2 class="section-title" [innerHTML]="langService.t().servicesSection.title"></h2>
+      <div class="structural-header reveal-on-scroll">
+        <div class="eyebrow">
+          <span>{{ langService.t().servicesSection.subtitle }}</span>
         </div>
+        <h2 class="section-title" [innerHTML]="langService.t().servicesSection.title"></h2>
+      </div>
 
+      <div class="intro-content reveal-on-scroll">
         <div class="intro-body">
           <p>{{ langService.t().servicesSection.p1 }}</p>
           <br>
           <p>{{ langService.t().servicesSection.p2 }}</p>
-          <br>
-          <p class="list-title">{{ langService.t().servicesSection.p3 }}</p>
-          <ul class="services-list">
-            @for (item of langService.t().servicesSection.list; track $index) {
-            <li class="reveal-on-scroll" [style.transition-delay]="$index * 50 + 'ms'">{{ item }}</li>
-            }
-          </ul>
         </div>
       </div>
 

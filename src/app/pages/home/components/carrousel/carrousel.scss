@@ -10,6 +10,12 @@
     height: 70vh;
     max-height: 800px;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      aspect-ratio: 4 / 3;
+      height: 50vh;
+      min-height: 300px;
+    }
   }
 
   .images-wrapper {

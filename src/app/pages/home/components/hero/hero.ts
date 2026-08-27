@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { LanguageService } from '../../../../core/services/language.service';
 
 @Component({
@@ -10,4 +11,13 @@ import { LanguageService } from '../../../../core/services/language.service';
 })
 export class HeroComponent {
   public langService = inject(LanguageService);
+  private router = inject(Router);
+
+  goToContact() {
+    this.router.navigate(['/contato']).then(() => window.scrollTo(0, 0));
+  }
+
+  goToServices() {
+    this.router.navigate(['/servicos']).then(() => window.scrollTo(0, 0));
+  }
 }

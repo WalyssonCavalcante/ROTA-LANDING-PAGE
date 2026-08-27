@@ -3,6 +3,10 @@
   background-color: #070b19;
   color: var(--text-light, #ffffff);
 
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
   .vision-container {
     max-width: 1200px;
     margin: 0 auto;

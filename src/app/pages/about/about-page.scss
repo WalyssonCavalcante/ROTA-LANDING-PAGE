@@ -7,6 +7,10 @@
 
   padding-top: 150px;
   padding-bottom: 0;
+
+  @media (max-width: 768px) {
+    padding-top: 100px;
+  }
 }
 
 .about-section {
@@ -120,6 +124,10 @@
 .qs-section {
   padding-bottom: 120px;
 
+  @media (max-width: 768px) {
+    padding-bottom: 60px;
+  }
+
   .qs-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -137,6 +145,10 @@
   background-color: #ffffff;
   padding: 100px 0;
 
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
   .nm-container {
     position: relative;
   }
@@ -150,6 +162,10 @@
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
       gap: 50px;
+
+      .image-wrapper {
+        order: -1;
+      }
     }
   }
 }
